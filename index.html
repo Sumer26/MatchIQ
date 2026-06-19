@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MatchIQ OS — Football Intelligence Command Center</title>
+  <meta name="description" content="A football-first sports intelligence dashboard prototype with live-style match modules, analytics, player comparison, and scout mode." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div class="noise-layer" aria-hidden="true"></div>
+  <div class="orb orb-a" aria-hidden="true"></div>
+  <div class="orb orb-b" aria-hidden="true"></div>
+  <div class="orb orb-c" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <aside class="os-rail" aria-label="Primary navigation">
+      <a href="#command" class="brand-lockup" data-route="command" aria-label="MatchIQ home">
+        <span class="brand-mark">MIQ</span>
+        <span class="brand-copy">
+          <strong>MatchIQ</strong>
+          <small>Sports OS</small>
+        </span>
+      </a>
+
+      <nav class="rail-nav">
+        <button class="nav-item active" data-route="command"><span>⌁</span><em>Command</em></button>
+        <button class="nav-item" data-route="matches"><span>◉</span><em>Match Center</em></button>
+        <button class="nav-item" data-route="league"><span>▦</span><em>League Matrix</em></button>
+        <button class="nav-item" data-route="team"><span>⬡</span><em>Team HQ</em></button>
+        <button class="nav-item" data-route="players"><span>✦</span><em>Player Lab</em></button>
+      </nav>
+
+      <div class="sport-switcher" aria-label="Sports roadmap">
+        <p>Sport stack</p>
+        <button class="sport-pill active">⚽ Football</button>
+        <button class="sport-pill locked">🏀 Basketball</button>
+        <button class="sport-pill locked">🏏 Cricket</button>
+        <button class="sport-pill locked">🏒 Hockey</button>
+      </div>
+    </aside>
+
+    <main class="main-stage">
+      <header class="topbar">
+        <div class="search-unit">
+          <span>⌘K</span>
+          <input id="globalSearch" type="search" placeholder="Search clubs, players, matches, insights..." autocomplete="off" />
+          <div id="searchResults" class="search-results" role="listbox"></div>
+        </div>
+
+        <div class="mode-toggle" role="group" aria-label="Interface mode">
+          <button class="mode-btn active" data-mode="fan">Fan</button>
+          <button class="mode-btn" data-mode="analyst">Analyst</button>
+          <button class="mode-btn" data-mode="scout">Scout</button>
+        </div>
+
+        <button id="themePulse" class="pulse-action" type="button">Pulse UI</button>
+      </header>
+
+      <section class="ticker" aria-label="Live match ticker">
+        <div class="ticker-track" id="tickerTrack"></div>
+      </section>
+
+      <div id="routeRoot" class="route-root"></div>
+    </main>
+
+    <aside class="intel-dock" aria-label="Intelligence dock">
+      <div class="dock-card live-sensor">
+        <div class="sensor-ring"><span></span></div>
+        <div>
+          <p>System status</p>
+          <strong>Football OS online</strong>
+          <small>Mock data layer · ready for API</small>
+        </div>
+      </div>
+
+      <div class="dock-card" id="dockInsight"></div>
+      <div class="dock-card" id="dockWatchlist"></div>
+      <div class="dock-card compact-dock">
+        <p class="eyebrow">Next build layer</p>
+        <h3>Real data bridge</h3>
+        <span>API cache → fixtures → live events → player stats → notifications</span>
+      </div>
+    </aside>
+  </div>
+
+  <script type="module" src="scripts/app.js"></script>
+</body>
+</html>
