@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teams | MatchIQ</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="teams">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">IQ</span>MatchIQ</a>
+      <nav class="site-nav">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="matches.html" data-nav="matches">Matches</a>
+        <a href="leagues.html" data-nav="leagues">Leagues</a>
+        <a href="teams.html" data-nav="teams">Teams</a>
+        <a href="players.html" data-nav="players">Players</a>
+      </nav>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Open navigation">Menu</button>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero">
+      <span class="eyebrow">Club profiles</span>
+      <h1>Team identity, stats, <span>and strengths.</span></h1>
+      <p>Each card gives a quick tactical profile. Later we can turn these into full team pages with squads, injuries, fixtures, heatmaps, and form intelligence.</p>
+    </section>
+
+    <section class="section">
+      <div id="team-grid" class="team-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <strong>MatchIQ</strong>
+    <span>Team cards · Mock data</span>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
